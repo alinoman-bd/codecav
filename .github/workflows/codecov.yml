@@ -24,7 +24,7 @@ jobs:
       - name: Directory Permissions
         run: chmod -R 777 storage bootstrap/cache
       - name: Execute tests via PestPHP
-        run: XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-clover --migrate-configuration /storage/codecov/codecov.xml
+        run: XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-clover storage/codecov/codecov.xml
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
         env:
